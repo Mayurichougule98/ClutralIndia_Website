@@ -1,0 +1,37 @@
+<html>
+<head>
+<script language="JavaScript">
+var i = 0;
+var path = new Array();
+ 
+// LIST OF IMAGES
+path[0] =  "6_Taj_Mahal_2000x1006.jpg";
+path[1] = "passage-to-persia.jpg";
+path[2] = "slider1.jpg";
+path[3] = "humayu.jpg";
+path[4] = "why-india-slider-image-3.jpg";
+function swapImage()
+{
+   document.slide.src = path[i];
+   if(i < path.length - 1) i++; 
+
+else
+ 	i = 0;
+   setTimeout("swapImage()",2000);
+}
+window.onload=swapImage;
+</script>
+<style>
+    #container
+	{
+	    height:100%;
+		width:100%;
+	}
+</style>
+</head>
+<body onload="swapImage();">
+  <div id="container">
+        <img align="center" height="100%" width="100%" name="slide" src="6_Taj_Mahal_2000x1006.jpg" >
+  </div>
+</body>
+</html>  
